@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GET</title>
+    </head>
+
+    <body>
+        <script>
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+                });
+                return vars;
+                }
+            
+            function gets() {
+                var first = getUrlVars()["id"];
+                var second = getUrlVars()["page"];
+
+                alert(first);
+                alert(second);
+                }
+            
+            gets()
+            
+        </script>
+    </body> 
+</html>
